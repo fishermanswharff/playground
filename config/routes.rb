@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  resources :high_scores
-  root 'greetings#hello'
-  get 'greetings/hello' => 'greetings#hello'
+
+  # get all the views
+  get 'welcome/index'
+
+  # root of the application
+  root 'welcome#index'
+
+  # access to our resources (models/data)
+  resources :characters
+  # resources :play_sets
+  # resources :scores
+  # resources :high_scores
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

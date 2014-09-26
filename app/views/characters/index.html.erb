@@ -1,0 +1,21 @@
+<h1>Listing characterss</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Superpower</th>
+  </tr>
+
+  <% @characters.each do |character| %>
+    <tr>
+      <td><%= character.name %></td>
+      <td><%= character.nickname %></td>
+      <td><%= character.superpower %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<p><%= link_to 'Create New Character', new_character_path %></p>
+<p><%= link_to 'Back', root_path %></p>
