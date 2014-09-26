@@ -9,16 +9,12 @@ class CharactersController < ApplicationController
 
   def create
     @character = Character.new(character_params)
-
     @character.save
     redirect_to @character
-
   end
 
   def show
-
     @character = Character.find(params[:id])
-
   end
 
   private
